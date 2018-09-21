@@ -1,0 +1,21 @@
+div#game-area {
+    position: relative;
+    width: 950px;
+    height: 950px;
+    margin: auto;
+    background: url(image/backgroud.jpg);
+    background-repeat: no-repeat;
+}
+
+table {
+    position:absolute;
+    border-spacing: 0px;
+    border:1px solid;
+}
+
+td {
+    width: 94px;
+    height: 94px;
+    border:1px solid;
+
+}
