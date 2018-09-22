@@ -23,6 +23,17 @@
     margin-left: 30px;
 }
 
+.round {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin:auto;
+    margin-top: 20px;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+}
+
 table {
     border-spacing: 0px;
     border:1px solid;
@@ -33,5 +44,6 @@ table {
 td {
     width: 94px;
     height: 94px;
-    border:1px solid;
+    border:1px solid transparent;
+
 }
