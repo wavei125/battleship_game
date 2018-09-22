@@ -1,17 +1,27 @@
-div#game-area {
+.container {
+    background-color: black;
+}
+
+.game-area {
     position: relative;
     width: 950px;
-    height: 950px;
-    margin: auto;
+    margin-left: 50px;
     background: url(image/backgroud.jpg);
     background-repeat: no-repeat;
+    display: inline-block;
+
+}
+
+.game-control {
+    display: inline-block;
+    background-color: cadetblue;
+    margin-right: 50px;
 }
 
 table {
-    position:absolute;
     border-spacing: 0px;
     border:1px solid;
-    
+
 }
 
 td {
