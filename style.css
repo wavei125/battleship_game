@@ -1,11 +1,13 @@
 .container {
     background-color: black;
+    display: flex;
+    margin: 20px 50px;
 }
 
 .game-area {
     position: relative;
     width: 950px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     background: url(image/backgroud.jpg);
     background-repeat: no-repeat;
     display: inline-block;
@@ -15,12 +17,13 @@
 .game-control {
     display: inline-block;
     background-color: cadetblue;
-    margin-right: 50px;
+    margin-left: 30px;
 }
 
 table {
     border-spacing: 0px;
     border:1px solid;
+    opacity: 0.4;
 
 }
 
