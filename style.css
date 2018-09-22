@@ -11,7 +11,10 @@
     background: url(image/backgroud.jpg);
     background-repeat: no-repeat;
     display: inline-block;
+}
 
+.game-area table td img{
+    max-width: 70px;
 }
 
 .game-control {
@@ -23,12 +26,12 @@
 table {
     border-spacing: 0px;
     border:1px solid;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 
 }
 
 td {
     width: 94px;
     height: 94px;
-    border:1px solid;
+    border:1px solid transparent;
 }
