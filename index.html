@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="style.css"></script>
 </head>
-<body>
-    <div id = "game-area"> 
+<body class="container">
+    <div class = "game-area"> 
         <table>
             <tr>
                 <td></td>
+                <td><img src="./Image/bird1.png"/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><img src="./Image/bird1.png"/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -19,79 +42,69 @@
                 <td></td>
             </tr>
             <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><img src="./Image/bird1.png"/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-            </tr>
-            <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
         </table>
     </div>
-
+    <div class ="game-control">
+        <div class="game-control-sub">
+            <div class="user-information">
+                <p style="color:blue; display: block">To start please enter your name:</p>
+                <input type="text" class="user-name" id ="userName" placeholder="Your name here">
+            </div>
+            <div class="round">Round</div>
+            <div class="score">Score</div>
+            <div class="user-input">Plase enter your location</div>
+            <input type="text" class="x-location" id="x" placeholder="x">
+            <input type="text" class="y-location" id="y" placeholder="y">
+            <button class="button-fire" id="button-fire">Fire</button>
+        </div>
+    </div>
+    <script src="battleship.js"></script>
 </body>
 </html>
