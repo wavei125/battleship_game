@@ -1,26 +1,19 @@
-var ships = [{x : 1, y : 1} , {x : 2, y : 2} , {x : 3, y : 3}];
+var ships = [{x : 2, y : 1} , {x : 3, y : 2} , {x : 5, y : 6}];
 var score = 0;
 var round = 0;
-var xUser = document.getElementById("x");
-var yUser = document.getElementById("y");
-var buttonFire = document.getElementById("button-fire")
+
 function fire() {
-  for (let n = 1; n <= 5; n++) {
-    debugger
-	  round = round + 1;
-    alert("round is " + round);
+  var xUser = document.getElementById("x").value;
+  var yUser = document.getElementById("y").value;
 	  for(let i = 0; i < ships.length; i++){
-      if(xUser = ships[i].x && yUser == ships[i].y){
-			  score = score + 1;
-        ships.splice(i, 1);
+      if(xUser == ships[i].x && yUser == ships[i].y){
         alert("Hit shot!");
+        score = score + 1;
+        document.getElementById("score").innerHTML = score;
+        var parent = document.getElementById("col" + ships[i].x + "-" + ships[i].y);
+        var children = document.getElementById("bird");
+        parent.removeChild(children);
       }
     }
-  }
-  if(score >= 3){
-    alert("You win");
-  } else {
-    alert("You lose");
-  }
 }
-buttonFire.addEventListener("click", fire)
+document.getElementById("button-fire").addEventListener("click", fire)
