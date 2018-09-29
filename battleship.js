@@ -20,21 +20,22 @@ function fire() {
     }
   if(count == 5) {
     var parent = document.getElementById("game-control-sub");
+    var childrenUserInput = document.getElementById("user-input");
     var childrenX = document.getElementById("x");
     var childrenY = document.getElementById("y");
+    var childrenButtonFire = document.getElementById("button-fire");
+    parent.removeChild(childrenUserInput);
     parent.removeChild(childrenX);
     parent.removeChild(childrenY);
+    parent.removeChild(childrenButtonFire);
+    var result = document.createElement("h1");
+    result.setAttribute("id", "result");
+    document.getElementById("game-control-sub").appendChild(result);
+    if(score >= 3) {
+      document.getElementById("result").innerHTML = "YOU WIN!";
+    } else {
+      document.getElementById("result").innerHTML = "YOU LOSE!";
+    }
   }
 }
 document.getElementById("button-fire").addEventListener("click", fire)
-
-// function result() {
-//   if(count == 5){
-//     var parent = document.getElementById("game-control-sub");
-//     var childrenX = document.getElementById("x");
-//     var childrenY = document.getElementById("y");
-//     parent.removeChild(childrenX);
-//     parent.removeChild(childrenY);
-//   }
-// }
-// document.getElementById("button-fire").addEventListener("click", result)
