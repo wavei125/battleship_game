@@ -1,0 +1,49 @@
+.container {
+    background-color: black;
+    display: flex;
+    margin: 20px 50px;
+}
+
+.game-area {
+    position: relative;
+    width: 950px;
+    /* margin-left: 50px; */
+    background: url(image/backgroud.jpg);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.game-area table td img{
+    max-width: 70px;
+}
+
+.game-control {
+    display: inline-block;
+    background-color: cadetblue;
+    margin-left: 30px;
+}
+
+.round {
+    display: block;
+    width: 100px;
+    height: 50px;
+    margin:auto;
+    margin-top: 20px;
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+}
+
+table {
+    border-spacing: 0px;
+    border:1px solid;
+    /* opacity: 0.4; */
+
+}
+
+td {
+    width: 94px;
+    height: 94px;
+    border:1px solid transparent;
+
+}
