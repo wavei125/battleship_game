@@ -18,11 +18,7 @@ function fire() {
         parent.removeChild(children);
       }
     }
-}
-document.getElementById("button-fire").addEventListener("click", fire)
-
-function result() {
-  if(count == 5){
+  if(count == 5) {
     var parent = document.getElementById("game-control-sub");
     var childrenX = document.getElementById("x");
     var childrenY = document.getElementById("y");
@@ -30,4 +26,15 @@ function result() {
     parent.removeChild(childrenY);
   }
 }
-document.getElementById("button-fire").addEventListener("click", result)
+document.getElementById("button-fire").addEventListener("click", fire)
+
+// function result() {
+//   if(count == 5){
+//     var parent = document.getElementById("game-control-sub");
+//     var childrenX = document.getElementById("x");
+//     var childrenY = document.getElementById("y");
+//     parent.removeChild(childrenX);
+//     parent.removeChild(childrenY);
+//   }
+// }
+// document.getElementById("button-fire").addEventListener("click", result)
