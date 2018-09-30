@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="style.css"></script>
+    <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body class="container">
     <div class = "game-area"> 
         <table>
             <tr>
                 <td></td>
-                <td><img src="./Image/bird1.png"/></td>
+                <td><img src="Image/bird1.png"/></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -21,19 +21,7 @@
             <tr>
                 <td></td>
                 <td></td>
-                <td><img src="./Image/bird1.png"/></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><img src="Image/bird1.png"/></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -70,8 +58,8 @@
                 <td></td>
                 <td></td>
                 <td></td>
+                <td><img src="Image/Missed.png"/></td>
                 <td></td>
-                <td><img src="./Image/bird1.png"/></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -81,6 +69,18 @@
             <tr>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td><img src="Image/bird1.png"/></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><img src="Image/Missed1.png"/></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -94,18 +94,34 @@
     </div>
     <div class ="game-control">
         <div class="game-control-sub">
-            <div class="user-information">
-                <p style="color:blue; display: block">To start please enter your name:</p>
-                <input type="text" class="user-name" id ="userName" placeholder="Your name here">
+            <div class="intruction-game" id = "intruction-game">
+                <h3>Intruction game:</h3>
+                <p>In this game, you will guess location of 3 target on the screen. You have 5 times to guess. To start the game you type your name then click "START" button, then
+                type x (1<= x <= 10) - is horizal line, y (1<= y <= 7) is vertical line.</p>
+                 <div class="user-information">
+                    <h3>To start please enter your name</h3>
+                    <input type="text" class="text-input" id ="userName" placeholder="Your name here">
+                    <input type = "button" class= "button-start" id = "button-start" value = "START" onclick = "startGame()" />
+                </div>
             </div>
-            <div class="round">Round</div>
-            <div class="score">Score</div>
-            <div class="user-input">Plase enter your location</div>
-            <input type="text" class="x-location" id="x" placeholder="x">
-            <input type="text" class="y-location" id="y" placeholder="y">
-            <button class="button-fire">Fire</button>
+            <div class = "start-game" id = "start-game">
+                <div class="round">Round
+                <p class = "count-round" id = "count-round">5</p>
+                </div>
+                <div class="score">Score
+                <p class = "count-score">1</p>
+                </div>
+                <div class="user-input">
+                    <h3>Enter your location</h3> 
+                    <input type="text" class="text-input-locaton" id="x" placeholder="x">
+                    <input type="text" class="text-input-locaton" id="y" placeholder="y">
+                    <button class="button-start" id = "button-fire" onclick = "fire()">Fire</button>            
+                </div>
+           </div>
         </div>
     </div>
+
+    <script src="code.js"></script>
 
 </body>
 </html>
