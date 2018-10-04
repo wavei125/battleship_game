@@ -16,7 +16,7 @@ function startGame() {
     document.getElementById("start-game").style.display = "block";
   }
 }
-document.getElementById("button-start").addEventListener("click", startGame)
+/* document.getElementById("button-start").addEventListener("click", startGame())*/
 
 function checkValid() {
   xLocation = document.getElementById("x").value;
@@ -43,14 +43,14 @@ function checkValid() {
     check = 0
   }
 }
-document.getElementById("button-fire").addEventListener("click", checkValid)
 
 function fire() {
+  debugger;
   var xUser = document.getElementById("x").value;
   var yUser = document.getElementById("y").value;
   // countRound = countRound + 1;
   // document.getElementById("count-round").innerHTML = countRound;
-  if(check){
+  if(checkValid()==1){
     countRound = countRound + 1;
     document.getElementById("count-round").innerHTML = countRound;
 	  for(let i = 0; i < ships.length; i++){
@@ -81,4 +81,4 @@ function fire() {
     }
   }
 }
-document.getElementById("button-fire").addEventListener("click", fire)
+document.getElementById("button-fire").addEventListener("click", fire);

@@ -5,9 +5,9 @@
 <body class="container">
     <div class = "game-area"> 
         <table>
-            <tr id="row1">
+            <tr id="row1" class="row1">
                 <td id="col1-1"></td>
-                <td id="col2-1"><img id="bird" src="./Image/bird1.png"/></td>
+                <td id="col2-1"></td>
                 <td id="col3-1"></td>
                 <td id="col4-1"></td>
                 <td id="col5-1"></td>
@@ -20,7 +20,7 @@
             <tr id="row2">
                 <td id="col1-2"></td>
                 <td id="col2-2"></td>
-                <td id="col3-2"><img id="bird" src="./Image/bird1.png"/></td>
+                <td id="col3-2"></td>
                 <td id="col4-2"></td>
                 <td id="col5-2"></td>
                 <td id="col6-2"></td>
@@ -70,7 +70,7 @@
                 <td id="col2-6"></td>
                 <td id="col3-6"></td>
                 <td id="col4-6"></td>
-                <td id="col5-6"><img id="bird" src="./Image/bird1.png"/></td>
+                <td id="col5-6"></td>
                 <td id="col6-6"></td>
                 <td id="col7-6"></td>
                 <td id="col8-6"></td>
@@ -94,35 +94,60 @@
     <div class ="game-control">
         <div class="game-control-sub" id="game-control-sub">
             <div class="intruction-game" id = "intruction-game">
-                <h3>Intruction game:</h3>
-                <p>In this game, you will guess location of 3 target on the screen. 
-                    You have 5 times to guess. To start the game you type your name
-                     then click "START" button, then
-                        type x (1<= x <= 10) - is horizal line
-                        , y (1<= y <= 7) is vertical line.
+                <div class="game-title">BATTLE GAME</div>
+                <p>Choice level to start game, you have 3 level game: EASY, NORMAL, DIFFICULT
                 </p>
                 <div class="user-information">
-                    <h3>To start please enter your name</h3>
-                    <input type="text" class="text-input" id ="userName" placeholder="Your name here">
-                    <input type = "button" class= "button-start" id = "button-start" value = "START"/>
+                    <h3>CHOICE LEVEL</h3>
+                    <input type="button" class="button-level" value="EASY" id="button-easy" onclick="startGameEasy()">
+                    <input type="button" class="button-level" value="NORMAL" id="button-normal" onclick="startGameNormal()">
+                    <input type="button" class="button-level" value="DIFFICULT" id="button-difficult">
                 </div>
             </div>
-            <div class = "start-game" id = "start-game">
+            <div class = "start-game" id = "start-game-easy">
+                <div class="intruction-game-text">
+                    You have 3 fixed target, your mission is guess 3 location of fixed target.
+                </div>
                 <div class="round">Round
                     <p class = "count-round" id = "count-round"><span>0</span></p>
                 </div>
                 <div class="score">Score
-                    <p class = "count-score" id = "count-score"><span>0</span></p>
+                    <p class = "count-score" id = "count-score-easy"><span>0</span></p>
                 </div>
                 <div class="user-input" id="user-input">
                     <h3 id="enter-location">Enter your location</h3> 
                     <input type="text" class="text-input-locaton" id="x" placeholder="x">
                     <input type="text" class="text-input-locaton" id="y" placeholder="y">
-                    <button class="button-start" id = "button-fire">Fire</button>            
+                    <button class="button-start" id = "button-fire" onclick="fireEasy()">Fire</button>            
                 </div>
             </div>
+            <div class = "start-game" id = "start-game-normal">
+                    <div class="intruction-game-text">
+                        You have 3 dynamic target, your mission is guess 3 location of dynamic target in 60s. 
+                    </div>
+                    <div class="round">Time
+                        <p class = "time-round" id = "time-round"><span>0</span></p>
+                    </div>
+                    <div class="score">Score
+                        <p class = "count-score" id = "count-score-normal"><span>0</span></p>
+                    </div>
+                    <button class="button-start" id = "button-start-normal" onclick="initTarget()()">PLAY</button>  
+                    <div class="user-input" id="user-input">
+                        <h3 id="enter-location">Enter your location</h3> 
+                        <input type = "text" class = "text-input-locaton" id = "x-normal" placeholder = "x">
+                        <input type = "text" class = "text-input-locaton" id = "y-normal" placeholder = "y">
+                        <button class="button-start" id = "button-fire-normal" onclick="fireNormal()">Fire</button>            
+                    </div>
+            </div>
+            <div class = "result-game" id = "result-game">
+                    <div class = "game-title" id = "result-text">YOU WIN</div>
+                    <div class="user-information">
+                        <input type="button" class="button-level" value="PLAY AGAIN" id="button-replay" onclick="rePlay()">
+                    </div>
+            </div>      
         </div>
     </div>
     <script src="battleship.js"></script>
+    <script src="gameB.js"></script>
 </body>
 </html>
